@@ -38,11 +38,13 @@ def _result_to_dict(result: Result, redact_secrets: bool) -> dict:
 
 
 def write_json_report(results: list[Result], path: str | Path, redact_secrets: bool = True) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "summary": summarize(results),
         "results": [_result_to_dict(r, redact_secrets) for r in results],
     }
-    Path(path).write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def write_html_report(
@@ -51,6 +53,8 @@ def write_html_report(
     target_name: str,
     redact_secrets: bool = True,
 ) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
     summary = summarize(results)
     rows = []
     for r in results:
@@ -123,4 +127,4 @@ def write_html_report(
   </table>
 </body>
 </html>"""
-    Path(path).write_text(html_doc, encoding="utf-8")
+    path.write_text(html_doc, encoding="utf-8")

@@ -53,7 +53,7 @@ planted in the system prompt:
 
 ```bash
 export OPENAI_API_KEY=sk-...
-leakprobe --target examples/target.openai.example.yaml --out report
+leakprobe --target examples/target.openai.example.yaml
 ```
 
 For your own bot, copy `examples/target.rest.example.yaml`, point
@@ -62,7 +62,9 @@ reply text lives in the JSON response. Secrets referenced as
 `${VAR_NAME}` are read from the environment — never put a real key
 directly in the YAML file.
 
-This writes `report.json` and `report.html`. Open the HTML one first.
+This writes `otchet/report.json` and `otchet/report.html` (the folder is
+created automatically). Open the HTML one first. Use `--out some/path`
+to write elsewhere.
 
 ## Payload battery
 

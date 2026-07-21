@@ -19,7 +19,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--payloads", default=None, help="Path to a custom payload YAML file (default: built-in battery)"
     )
-    parser.add_argument("--out", default="report", help="Output path prefix (default: ./report)")
+    parser.add_argument(
+        "--out", default="otchet/report", help="Output path prefix (default: ./otchet/report)"
+    )
     parser.add_argument("--format", choices=["html", "json", "both"], default="both")
     parser.add_argument(
         "--no-redact", action="store_true", help="Do not mask matched secrets/PII in the report"
