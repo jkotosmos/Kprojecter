@@ -1,7 +1,7 @@
 [project]
 name = "leakprobe"
 version = "0.1.0"
-description = "Battery-test a deployed chatbot for system-prompt and PII leakage, mapped to the OWASP LLM Top 10."
+description = "Battery-test a deployed chatbot for system-prompt/PII leakage and prompt-injection/jailbreak resistance, mapped to the OWASP LLM Top 10."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
@@ -16,13 +16,15 @@ dev = ["pytest>=7.0"]
 
 [project.scripts]
 leakprobe = "leakprobe.cli:main"
+injectprobe = "injectprobe.cli:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["leakprobe*"]
+include = ["leakprobe*", "injectprobe*"]
 
 [tool.setuptools.package-data]
 leakprobe = ["data/*.yaml"]
+injectprobe = ["data/*.yaml"]
