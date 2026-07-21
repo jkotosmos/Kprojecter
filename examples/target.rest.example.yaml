@@ -1,0 +1,24 @@
+# Template for a custom REST chatbot. Copy this, point it at your own
+# endpoint, and adjust response.text_path to match your JSON shape.
+
+name: "Demo: custom REST chatbot"
+
+request:
+  url: "https://chat.example.com/api/message"
+  method: POST
+  headers:
+    X-Api-Key: "${SUPPORT_BOT_API_KEY}"
+    Content-Type: "application/json"
+  body:
+    session_id: "leakprobe-test"
+    message: "{{input}}"
+
+response:
+  # Dot-path into the JSON response, e.g. {"reply": {"text": "..."}}
+  text_path: "reply.text"
+
+# Optional: only useful if you've planted a known fake secret in this
+# bot's own system prompt/config, purely so leakprobe can prove it leaks.
+canary: null
+timeout_seconds: 20
+rate_limit_seconds: 1.5
