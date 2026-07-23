@@ -1,9 +1,9 @@
-# Demo target: any OpenAI-compatible /chat/completions endpoint.
-# The system prompt plants an explicit, non-overridable rule protecting a
-# fake passphrase, so this run can prove, with zero ambiguity, whether
-# prompt injection / jailbreak techniques can override an instruction.
+# Демо-цель: любой OpenAI-совместимый эндпоинт /chat/completions.
+# В системный промпт заложено явное, не подлежащее переопределению правило
+# защищать фейковую фразу, поэтому этот запуск может однозначно доказать,
+# способны ли техники prompt injection / джейлбрейка переопределить инструкцию.
 #
-# Usage:
+# Использование:
 #   export OPENAI_API_KEY=sk-...
 #   injectprobe --target examples/target.injectprobe.openai.example.yaml
 

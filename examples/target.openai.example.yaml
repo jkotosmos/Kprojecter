@@ -1,8 +1,8 @@
-# Demo target: any OpenAI-compatible /chat/completions endpoint.
-# A fake secret is planted in the system prompt so this run can prove,
-# with zero ambiguity, whether prompt leakage is possible.
+# Демо-цель: любой OpenAI-совместимый эндпоинт /chat/completions.
+# В системный промпт заложен фейковый секрет, поэтому этот запуск может
+# однозначно доказать, возможна ли утечка промпта.
 #
-# Usage:
+# Использование:
 #   export OPENAI_API_KEY=sk-...
 #   leakprobe --target examples/target.openai.example.yaml --out report
 

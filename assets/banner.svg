@@ -1,16 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160">
-  <rect width="720" height="160" rx="12" fill="#0d1117"/>
-  <rect x="0.5" y="0.5" width="719" height="159" rx="11.5" fill="none" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="200" viewBox="0 0 760 200">
+  <rect width="760" height="200" rx="14" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="759" height="199" rx="13.5" fill="none" stroke="#30363d"/>
 
+  <!-- leakprobe icon: chat bubble with a leak drop -->
   <g>
-    <rect x="40" y="34" width="104" height="64" rx="14" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
-    <path d="M58 98 L58 114 L74 98 Z" fill="#161b22" stroke="#3fb950" stroke-width="2" stroke-linejoin="round"/>
-    <circle cx="68" cy="66" r="5" fill="#3fb950"/>
-    <circle cx="92" cy="66" r="5" fill="#3fb950"/>
-    <circle cx="116" cy="66" r="5" fill="#e5484d"/>
-    <path d="M116 76 C112 84 112 90 116 96 C120 90 120 84 116 76 Z" fill="#e5484d"/>
+    <rect x="36" y="30" width="72" height="54" rx="12" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+    <path d="M50 84 L50 98 L64 84 Z" fill="#161b22" stroke="#3fb950" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="58" cy="54" r="4" fill="#3fb950"/>
+    <circle cx="76" cy="54" r="4" fill="#3fb950"/>
+    <circle cx="94" cy="54" r="4" fill="#3fb950"/>
+    <path d="M108 70 C104 78 104 84 108 90 C112 84 112 78 108 70 Z" fill="#e5484d"/>
   </g>
 
-  <text x="176" y="80" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="42" font-weight="700" fill="#e6edf3">leakprobe</text>
-  <text x="178" y="108" font-family="Segoe UI, -apple-system, sans-serif" font-size="16" fill="#8b949e">chatbot system-prompt &amp; PII leak tester</text>
+  <!-- injectprobe icon: shield with a crack -->
+  <g>
+    <path d="M150 28 L182 38 L182 66 C182 84 168 96 150 102 C132 96 118 84 118 66 L118 38 Z"
+          fill="#161b22" stroke="#f5a623" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M150 40 L138 66 L150 66 L144 90 L164 60 L151 60 Z" fill="#f5a623"/>
+  </g>
+
+  <text x="204" y="66" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="34" font-weight="700" fill="#e6edf3">Kprojecter</text>
+  <text x="206" y="90" font-family="Segoe UI, -apple-system, sans-serif" font-size="15" fill="#8b949e">проверка защит LLM-приложений: утечки, prompt injection, джейлбрейки</text>
+
+  <g font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="13" font-weight="700">
+    <rect x="36" y="128" width="150" height="34" rx="17" fill="#0f2418" stroke="#3fb950"/>
+    <circle cx="56" cy="145" r="5" fill="#3fb950"/>
+    <text x="70" y="150" fill="#7ee2a8">leakprobe</text>
+
+    <rect x="200" y="128" width="164" height="34" rx="17" fill="#2b1c0d" stroke="#f5a623"/>
+    <circle cx="220" cy="145" r="5" fill="#f5a623"/>
+    <text x="234" y="150" fill="#ffcf8a">injectprobe</text>
+  </g>
+
+  <text x="36" y="186" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" fill="#8b949e">OWASP LLM Top 10 &#183; MIT license</text>
 </svg>

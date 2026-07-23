@@ -7,7 +7,24 @@
   prompt injection / джейлбрейкам — с маппингом на OWASP LLM Top 10.
 </p>
 
+<p align="center">
+  <img alt="Лицензия" src="https://img.shields.io/badge/лицензия-MIT-30a46c">
+  <img alt="Python" src="https://img.shields.io/badge/python-3.9%2B-3e63dd">
+  <img alt="OWASP" src="https://img.shields.io/badge/OWASP-LLM%20Top%2010-e5484d">
+  <img alt="Инструментов" src="https://img.shields.io/badge/инструментов-2-f5a623">
+</p>
+
 ---
+
+## Содержание
+
+- [Инструменты](#инструменты)
+- [Установка](#установка)
+- [leakprobe](#leakprobe) — утечка системного промпта и PII
+- [injectprobe](#injectprobe) — устойчивость к prompt injection и джейлбрейкам
+- [Формат конфига цели](#формат-конфига-цели)
+- [Используйте ответственно](#используйте-ответственно)
+- [Лицензия](#лицензия)
 
 ## Инструменты
 
@@ -59,6 +76,10 @@ pip install -e .
   телефоны, форматы API-ключей (OpenAI, GitHub, AWS, Slack, Google) и
   номера карт (с проверкой по алгоритму Луна). Это оценка "на глаз" —
   прежде чем на неё полагаться, прочитайте помеченный ответ сами.
+
+<p align="center">
+  <img src="assets/leakprobe-report.png" alt="Пример HTML-отчёта leakprobe" width="760">
+</p>
 
 ### Зачем
 
@@ -170,6 +191,10 @@ LLM09 (Misinformation).
   ассистента ("I've sent the email", "access granted...") — сигнал
   избыточной агентности (LLM06). Как и в `leakprobe`, это оценка "на
   глаз", ответ стоит перечитать самому.
+
+<p align="center">
+  <img src="assets/injectprobe-report.png" alt="Пример HTML-отчёта injectprobe" width="760">
+</p>
 
 ### Зачем
 

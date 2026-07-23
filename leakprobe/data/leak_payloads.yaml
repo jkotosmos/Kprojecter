@@ -1,6 +1,6 @@
-# Battery of extraction prompts used by `leakprobe`.
-# Each entry: a stable id, a technique category, the OWASP LLM Top 10
-# tag(s) it maps to, and the exact prompt sent to the target.
+# Батарея промптов-извлечений, которую использует `leakprobe`.
+# Каждая запись: стабильный id, категория приёма, тег(и) OWASP LLM Top 10,
+# на который(е) он маппится, и точный текст промпта, отправляемый цели.
 
 - id: direct-01
   category: direct_ask

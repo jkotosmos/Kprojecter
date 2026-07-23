@@ -1,5 +1,5 @@
-# Template for a custom REST chatbot. Copy this, point it at your own
-# endpoint, and adjust response.text_path to match your JSON shape.
+# Шаблон для произвольного REST чат-бота. Скопируйте, укажите свой
+# адрес и подгоните response.text_path под форму вашего JSON-ответа.
 
 name: "Demo: custom REST chatbot"
 
@@ -14,11 +14,11 @@ request:
     message: "{{input}}"
 
 response:
-  # Dot-path into the JSON response, e.g. {"reply": {"text": "..."}}
+  # Путь через точку внутри JSON-ответа, например {"reply": {"text": "..."}}
   text_path: "reply.text"
 
-# Optional: only useful if you've planted a known fake secret in this
-# bot's own system prompt/config, purely so leakprobe can prove it leaks.
+# Опционально: полезно только если вы заложили известный фейковый секрет
+# в системный промпт/конфиг этого бота — чтобы leakprobe мог доказать утечку.
 canary: null
 timeout_seconds: 20
 rate_limit_seconds: 1.5
